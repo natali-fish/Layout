@@ -1,0 +1,187 @@
+:root{
+	box-sizing: border-box;
+	font-size: calc(1vw + 0.6em);
+}
+
+body{
+	margin: 0;
+	font-family: Helvetica, Arial, sans-serif;
+}
+/*******************************************
+********** ССЫЛКИ *************************
+*******************************************/
+a:link{
+	color: #1476bb;
+	font-weight: bold;
+	text-decoration: none;
+}
+a:visited{
+	color: #1414bb;
+}
+a:hover{
+	text-decoration: underline;
+}
+a:active{
+	color: #b45514;
+}
+/*******************************************
+************** ШАПКА  *********************
+*******************************************/
+.page-header{
+	padding: 0.5em 1em;
+	background: #fff;
+}
+
+.title > h1 {
+	color:#333;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	margin: .25em 0;
+}
+.slogan{
+	color: #888;
+	font-size: .8em;
+	margin: 0;
+}
+/*******************************************
+************** ASIDE  *********************
+*******************************************/
+.hero{
+	padding: 2em 1.5em;
+	text-align: center;
+	background: url(img/coffee.avif);
+	background-size:cover;
+	color: #fff;
+	text-shadow: 0.1em 0.1em 0.3em #000;
+}
+/*******************************************
+************** MAIN  *********************
+*******************************************/
+main{
+	padding: 1.2em;
+}
+.subtitle{
+	margin-top: 1.2em;
+	margin-bottom: 1.2em;
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
+/*******************************************
+************** Menu  *********************
+*******************************************/
+.menu{
+	position: relative;
+}
+.menu-toggle{
+	position: absolute;
+	top: -1.2em;
+	right: 0em;
+	border:0;
+	background-color: transparent;
+	font-size: 3.1em;
+	width: 1em;
+	height: 1em;
+	line-height: 0.4em;
+	overflow: hidden;
+	white-space: nowrap;
+	text-indent: 5em;
+}
+.menu-toggle::after{
+	position: absolute;
+	top: 0.4em;
+	left: 0.1em;
+	display: block;
+	content: "\2261";
+	text-indent:0;
+}
+
+.menu-dropdown{
+	display: none;
+	position: absolute;
+	right: 0;
+	left: 0;
+	margin: 0;
+}
+.menu.is-open .menu-dropdown{
+	display: block;
+}
+.nav-menu{
+	margin: 0;
+	padding: 0;
+	border: 1px solid #ccc;
+	background: #000;
+	color: #fff;
+}
+.nav-menu >li + li {
+     border-top: 1px solid #ccc;
+}
+.nav-menu > li > a{
+	display: block;
+	padding: 0.7em 1em;
+	color: #fff;
+	font-weight: normal;
+}
+
+@media (min-width:560px) {
+	.title > h1 {
+		font-size: 2.2rem;
+	}
+
+	.hero{
+		padding: 5em 3em;
+		font-size: 1.3em;
+		
+	}
+	.menu-toggle{
+		display: none;
+	}
+	.menu-dropdown{
+		display: block;
+		position: static;
+	}
+	.nav-menu{
+		display: flex;
+		border: 0;
+		padding: 0 1em;
+		list-style-type: none;
+	}
+	.nav-menu > li{
+		flex: 1;
+	}
+	.nav-menu > li + li{
+		border: 0;
+	}
+	.nav-menu > li > a{
+		padding: 0.3em;
+		text-align: center;
+	}
+	.row{
+		display: flex;
+		margin-left: -0.75em;
+		margin-right: -0.75em;
+
+	}
+	.column{
+		flex:1;
+		margin-left: 0.75em;
+		margin-right: 0.75em;
+	}
+}
+@media (min-width: 50em) {
+	.page-header{
+		padding: 1.2em 4em;
+	}
+	.hero{
+		padding: 7em 6em;
+	}
+	.main{
+		padding: 2em 4em;
+	}
+	:root{
+		font-size: 1.2em;
+	}
+	.hero{
+		padding: 7em 5em;
+		background: url(img/coffee.avif);
+	}
+}
